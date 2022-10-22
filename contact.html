@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<!--
+	Name: Daryl del Rosario
+	Date Created: Friday, August 6, 2021 @ 4:32pm
+	Most Recent Revision: Saturday, August 14, 2021 @ 11:53am
+-->
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+		<title>Contact</title>
+		
+		<!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+		
+		<!-- Javascript File -->
+		<script type="text/javascript" src="scripts/restaurant.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+		
+		<style>
+		@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
+		</style>
+		
+		<!-- style for Restaurant Assessment 2 -->
+		<!--
+		<style>
+		@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
+		
+		table {
+			width: 100%;
+			margin: auto;
+		}
+			
+		input[type=text], select, textarea {
+			width: 50%;
+		}
+		
+		input[type=submit] {
+			font-size: 1.2em;
+			background-color: #fb9902;
+		}
+		
+		input[type=submit]:hover {
+			font-weight: bold;
+			background-color: black;
+			color: #fb9902;
+		}
+		
+		input[type=submit]:active {
+			background-color: white;
+			color: black;
+		}
+		
+		textarea {
+			height: 100px;
+		}
+		
+		tfoot td {
+			text-align: center;
+			padding: 10px;
+		}
+		
+		td {
+			padding: 10px;
+		}
+		
+		
+		.title {
+			width: 40%;
+			text-align: right;
+			font-weight: bold;
+		}
+		
+		label {
+			font-size: 1.2em;
+		}
+		
+		.days, .choice {
+			padding-right: 20px;
+		}
+		
+		</style>
+		-->
+		<!-- End style for Restaurant Assessment 2 -->
+		
+		<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	
+	<body onload="toggleNews();">
+		<header>
+			<h1>Xenz World Class Restaurant</h1>
+			<h2 id="news"></h2>
+			<noscript><span style="color: red">Your Browser Does Not Support Javascript! Enable for best viewing:</span>
+			<p><a href="https://support.google.com/adsense/answer/12654?hl=en">Enable JavaScript</a></p>
+			</noscript>
+		</header>
+		
+		<nav>
+		<a class="btn btn-outline-warning" href="index.html"><i class="fa fa-home"></i></a>
+		<a class="btn btn-outline-warning" href="menu.html">Menu</a>
+		<a class="btn btn-outline-warning" href="contact.html">Contact Us</a>
+		</nav>
+		<br />
+		
+		<!-- Enter Code for Form -->
+		<div class="container" style="text-align: center; width: 60%; margin: auto;">
+		
+		<form name="contactUs" class="needs-validation" onsubmit="return validateCheckbox();" novalidate>
+			<div class="form-group row">
+				<label id="contactLabel" for="name" class="col-sm-5 col-form-label">Name: </label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" id="name" required>
+					<div class="invalid-feedback" style="text-align: left">
+					Please enter your name
+					</div>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label id="contactLabel" for="email" class="col-sm-5 col-form-label">Email: </label>
+				<div class="col-sm-7">
+					<input type="email" class="form-control" id="email" required>
+					<div class="invalid-feedback" style="text-align: left">
+					Please enter a valid email
+					</div>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label id="contactLabel" for="phone" class="col-sm-5 col-form-label">Phone: </label>
+				<div class="col-sm-7">
+					<input type="phone" class="form-control" id="phone" required>
+					<div class="invalid-feedback" style="text-align: left">
+					Please enter a valid phone number
+					</div>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label id="contactLabel" for="inquiry" class="col-sm-5 col-form-label">Reason for Inquiry: </label>
+				<div class="col-sm-7">
+					<select id="inquiry" class="form-control">
+						<option selected>Catering</option>
+						<option>Private Party</option>
+						<option>Feedback</option>
+						<option>Other</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label id="contactLabel" for="moreInfo" class="col-sm-5 col-form-label">Additional Information: </label>
+				<div class="col-sm-7">
+					<textarea class="form-control" id="moreInfo" rows="5" required></textArea>
+					<div class="invalid-feedback" style="text-align: left">
+					N/A if not applicable
+					</div>
+				</div>
+			</div>
+			
+			<fieldset class="form-group">
+				<div class="row">
+					<legend id="contactLegend" class="col-form-label col-sm-5 pt-0">Have you been to the restaurant? </legend>
+						<div class="col-sm-7" style="text-align: left">
+							<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="choice" id="no" value="no" required />
+							<label class="form-check-label" for="no">No</label>
+							</div>
+							<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="choice" id="yes" value="yes" />
+							<label class="form-check-label" for="yes">Yes</label>
+							</div>
+						</div>
+				</div>
+			</fieldset>
+			
+	
+			<!-- From Bootstrap Radio -->
+			<!--
+			<fieldset class="form-group">
+				<div class="row">
+					<legend id="contactLegend" class="col-form-label col-sm-5 pt-0">Have you been to the restaurant? </legend>
+						<div class="col-sm-7" style="text-align: left">
+							<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+							<label class="form-check-label" for="gridRadios1">
+							First radio
+							</label>
+							</div>
+							<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+							<label class="form-check-label" for="gridRadios2">
+							Second radio
+							</label>
+							</div>
+							<div class="form-check form-check-inline disabled">
+							<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+							<label class="form-check-label" for="gridRadios3">
+							Third disabled radio
+							</label>
+							</div>
+						</div>
+				</div>
+			</fieldset>
+			-->
+			<!-- End Bootstrap Radio -->
+			
+			<fieldset class="form-group">
+				<div class="row">
+					<legend id="contactLegend" class="col-form-label col-sm-5 pt-0">Best days to contact you: </legend>
+						<div class="col-sm-7" style="text-align: left">
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" name="checkBox" id="mon" value="mon">
+							<label class="form-check-label" for="mon">M</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" name="checkBox" id="tues" value="tues">
+							<label class="form-check-label" for="tues">T</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" name="checkBox" id="wed" value="wed">
+							<label class="form-check-label" for="wed">W</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" name="checkBox" id="thurs" value="thurs">
+							<label class="form-check-label" for="thurs">Th</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" name="checkBox" id="fri" value="fri">
+							<label class="form-check-label" for="fri">F</label>
+						</div>
+				</div>
+			</fieldset>
+			<br />
+			<button type="submit" class="btn btn-outline-dark">Send Request</button>				
+		</form>
+		</div>
+		<br />
+		<!-- End Code for Form -->
+		
+
+		
+		<!-- script for validation -->
+		<script>
+		// Example starter JavaScript for disabling form submissions if there are invalid fields
+		(function() {
+			'use strict';
+			window.addEventListener('load', function() {
+			// Fetch all the forms we want to apply custom Bootstrap validation styles to
+			var forms = document.getElementsByClassName('needs-validation');
+			// Loop over them and prevent submission
+			var validation = Array.prototype.filter.call(forms, function(form) {
+			form.addEventListener('submit', function(event) {
+			if (form.checkValidity() === false) {
+				event.preventDefault();
+				event.stopPropagation();
+			}
+			form.classList.add('was-validated');
+			}, false);
+			});
+			}, false);
+		})();
+		</script>
+		<!-- end script for validation -->
+		
+		
+		<!-- From from Restaurant Assessment 2 -->
+		<!--
+		<section>
+		<br />
+		<table>
+		<form action="submit.html" method="POST">
+		
+		<tbody>
+			<tr>
+				<td class="title">
+				<label for="name">Name: </label>
+				</td>
+				<td>
+				<input type="text" id="name" name="name" />
+				</td>
+			</tr>
+			<tr>
+				<td class="title">
+				<label for="email">Email: </label>
+				</td>
+				<td>
+				<input type="text" id="email" name="email" />
+				</td>
+			</tr>
+			<tr>
+				<td class="title">
+				<label for="phone">Phone: </label>
+				</td>
+				<td>
+				<input type="text" id="phone" name="phone" />
+				</td>
+			</tr>
+			<tr>
+				<td class="title">
+				<label for="inquiry">Reason for Inquiry: </label>
+				</td>
+				<td>
+				<select id="inquiry" name="inquiry">
+				<option value="cater" selected>Catering</option>
+				<option value="private">Private Party</option>
+				<option value="feedback">Feedback</option>
+				<option value="other">Other</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="title">
+				<label for="info">Additional Information: </label>
+				</td>
+				<td>
+				<textarea id="info" name="info"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td class="title">
+				<label for="questionnaire">Have you been to the restaurant?</label>
+				</td>
+				<td>
+				<input type="radio" id="choice1" name="questionnaire" value="no"/>
+				<label class="choice" for="choice1">No</label>
+				<input type="radio" id="choice2" name="questionnaire" value="yes"/>
+				<label class="choice" for="choice2">Yes</label>
+				</td>
+			</tr>
+			</tr>
+				<td class="title">
+				<label for="contact">Best days to contact you:</label>
+				</td>
+				<td>
+				<input type="checkbox" id="mon" name="contact" value="mon">
+				<label class="days" for="mon">M</label>
+				<input type="checkbox" id="tues" name="contact" value="tues">
+				<label class="days" for="tues">T</label>
+				<input type="checkbox" id="wed" name="contact" value="wed">
+				<label class="days" for="wed">W</label>
+				<input type="checkbox" id="thurs" name="contact" value="thurs">
+				<label class="days" for="thurs">Th</label>
+				<input type="checkbox" id="fri" name="contact" value="fri">
+				<label class="days" for="fri">F</label>
+				</td>
+			</tr>
+		</tbody>
+		
+		<tfoot>
+			<tr>
+			<td colspan="2">
+			<input type="submit" name="submit" class="btn badge-pill" value="Send Request" />
+			</td>
+			</tr>
+		</tfoot>
+		
+		</form>
+		</table>
+		
+		<br />
+		
+		</section>
+		-->
+		<!-- End Form from Restaurant Assessment 2 -->
+		
+		<footer>
+		<p>&copy; 2021 Daryl del Rosario. All Rights Reserved.<br />
+		143 Abundant Road, Universal Connection, State of Soul, 17895<br />
+		777-369-1111</p>
+		</footer>
+		
+	<!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>
+</html>

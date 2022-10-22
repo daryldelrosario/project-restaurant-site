@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!--
+	Name: Daryl del Rosario
+	Date Created: Friday, August 6, 2021 @ 4:09pm
+	Most Recent Revision: Monday, August 23, 2021 @ 8:45am
+-->
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+		<title>Menu</title>
+		
+		<!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+		
+		<!-- Javascript File -->
+		<script type="text/javascript" src="scripts/restaurant.js"></script>
+	
+		<style>
+		@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
+		
+		table {
+			width: 100%;
+		}
+		
+		table.beverage {
+			width: 80%;
+			margin: auto;
+		}
+		
+		table.beverage td {
+			border: 1px solid black;
+			padding: 10px;
+		}
+		
+		table.beverage tr:nth-child(odd) {
+			background-color: #fc600a;
+		}
+		
+		.bname {
+			text-align: left;
+			font-weight: bold;
+		}
+		
+		.bprice {
+			text-align: right;
+		}
+		
+		th, td {
+			width: 33%;
+			text-align: center;
+		}
+		
+		thead th {
+			font-size: 1.2em;
+		}
+		
+		h2 {
+			font-family: 'Arvo', serif;
+			color: #fc600a;
+			text-align: center;
+		}
+		
+		#menuLine {
+			width: 40%;
+			margin: auto;
+			border: thin solid #fccb1a;
+		}
+		
+		</style>
+		
+		<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	
+	<body onload="toggleNews();">
+		<header>
+			<h1>Xenz World Class Restaurant</h1>
+			<h2 id="news"></h2>
+			<noscript><span style="color: red">Your Browser Does Not Support Javascript! Enable for best viewing:</span>
+			<p><a href="https://support.google.com/adsense/answer/12654?hl=en">Enable JavaScript</a></p>
+			</noscript>
+		</header>
+		
+		<nav>
+		<a class="btn btn-outline-warning" href="index.html"><i class="fa fa-home"></i></a>
+		<a class="btn btn-outline-warning" href="menu.html">Menu</a>
+		<a class="btn btn-outline-warning" href="contact.html">Contact Us</a>
+		</nav>
+		
+		<!-- Enter Carousel -->
+		<div class="container" style="padding-top: 30px;">
+			<div id="carouselContent" class="carousel slide" data-ride="carousel" data-interval="4444">
+				<div class="carousel-inner" role="listbox">
+					<div class="carousel-item active text-center p-2">
+					<h5>We're Opening a New Location!</h5>
+					<p id="carouselCaption">Coming Soon to a Place Near You<p>
+					</div>
+					<div class="carousel-item text-center p-2">
+					<h5>We're Rolling Out Our Seasonal Menu</h5>
+					<p id="carouselCaption">With Special Options for This Season</p>
+					</div>
+					<div class="carousel-item text-center p-2">
+					<h5>The Drink of the Month</h5>
+					<p id="carouselCaption">SG Special Brew</p>
+					</div>
+				</div>
+				
+				<a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+				<hr style="margin: auto;"/>
+			</div>
+		</div>
+		<!-- End Carousel -->	
+		<br />
+		<h2>Popular Choices</h2>
+		<hr id="menuLine" />
+		
+		<section>
+		<br />
+		
+		<div class="container" style="text-align: center; margin: auto;">
+		<div class="row">
+			<div class="col-md-4" style="padding: 10px;">
+			<span id="tLabel">Burger and Fries</span> <br />
+			Your choice - with or without cheese. <br />
+			Pickle, onion, tomato, and lettuce. <br />
+			Served with our famous thick cut french fries. <br />
+			$7.95 <br />
+			</div>
+			<div class="col-md-4" style="padding: 10px;">
+			<span id="tLabel">Hot Dog and Chips</span> <br />
+			Your choice - white or wheat bun. <br />
+			Relish, mustard, and ketchup. <br />
+			Served with our house-made chips. <br />
+			$7.95 <br />
+			</div>
+			<div class="col-md-4" style="padding: 10px;">
+			<span id="tLabel">Italian Sausage and Peppers</span> <br />
+			An All-Time Favorite! <br />
+			Your choice - mild or spicy coleslaw. <br />
+			Served with garlic mashers. <br />
+			$10.95 <br />
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-4" style="padding: 10px;">
+			<span id="tLabel">Tenderloin Sandwich and Chips</span> <br />
+			Really Hits the Spot! <br />
+			Your choice - plain or sesame seed bun. <br />
+			Pickle, onion, tomato and lettuce. <br />
+			Served with our house-made chips. <br />
+			$8.95 <br />
+			</div>
+			<div class="col-md-4" style="padding: 10px;">
+			<span id="tLabel">House Salad</span> <br />
+			On the Lighter Side. <br />
+			Your choice - with or without cheese. <br />
+			Thousand Island or Ranch Dressing. <br />
+			Iceberg lettuce, tomatoes, peppers.<br />
+			Served with a dinner roll. <br />
+			$6.95 <br />
+			</div>
+			<div class="col-md-4" style="padding: 10px;">
+			<span id="tLabel">Brisket Sandwich and Fries</span> <br />
+			A Taste of Texas! <br />
+			Smoked Brisket on thick-cut Texas Toast. <br />
+			Coleslaw. <br />
+			Served with our famous thick-cut french fries. <br />
+			$7.95 <br />
+			</div>
+		</div>
+		</div>
+		<br />
+			
+		
+		<!-- This was created in Restaurant Assessment 2 when I thought the best way to create the menu was via table
+		
+		<table>
+		<thead>
+		<tr>
+			<th>Burger and Fries</th>
+			<th>Hot Dog and Chips</th>
+			<th>Italian Sausage and Peppers</th>
+		</tr>
+		</thead>
+		
+		<tbody>
+		<tr>
+			<td>An American Classic! <br />
+			Your choice - with or without cheese. <br />
+			Pickle, onion, tomato, and lettuce. <br />
+			Served with our famous thick cut french fries.</td>
+			<td>A Summer Classic! <br />
+			Your choice - white or wheat bun. <br />
+			Relish, mustard, and ketchup. <br />
+			Served with our house-made chips.</td>
+			<td>An All-Time Favorite! <br />
+			Your choice - mild or spicy coleslaw. <br />
+			Served with garlic mashers.</td>
+		</tr>
+		</tbody>
+		
+		<tfoot>
+		<tr>
+			<td>$7.95</td>
+			<td>$7.95</td>
+			<td>$10.95</td>
+		</tr>
+		</tfoot>
+		</table>
+		
+		<br />
+		
+		<table>
+		<thead>
+		<tr>
+			<th>Tenderloin Sandwich and Chips</th>
+			<th>House Salad</th>
+			<th>Brisket Sandwich and Fries</th>
+		</tr>
+		</thead>
+		
+		<tbody>
+		<tr>
+			<td>Really Hits the Spot! <br />
+			Your choice - plain or sesame seed bun. <br />
+			Pickle, onion, tomato and lettuce. <br />
+			Served with our house-made chips.</td>
+			<td>On the Lighter Side. <br />
+			Your choice - with or without cheese. <br />
+			Thousand Island or Ranch Dressing. <br />
+			Iceberg lettuce, tomatoes, peppers.<br />
+			Served with a dinner roll.</td>
+			<td>A Taste of Texas! <br />
+			Smoked Brisket on thick-cut Texas Toast. <br />
+			Coleslaw. <br />
+			Served with our famous thick-cut french fries.</td>
+		</tr>
+		</tbody>
+		
+		<tfoot>
+		<tr>
+			<td>$8.95</td>
+			<td>$6.95</td>
+			<td>$7.95</td>
+		</tr>
+		</tfoot>
+		</table>
+		</section>
+		
+		<br />
+		-->
+		
+		<h2>Beverages</h2>
+		<hr id="menuLine" />
+		
+		<br />
+		<section>
+		<table class="beverage">
+		<tbody>
+			<tr>
+				<td class="bname">Root Beer</td>
+				<td class="bprice">$3.00</td>
+			</tr>
+			<tr>
+				<td class="bname">Bottled Water</td>
+				<td class="bprice">$1.25</td>
+			</tr>
+			<tr>
+				<td class="bname">Lemonade</td>
+				<td class="bprice">$1.00</td>
+			</tr>
+			<tr>
+				<td class="bname">Iced Tea</td>
+				<td class="bprice">$1.25</td>
+			</tr>
+			
+			
+		</tbody>
+		</table>
+		
+		</section>
+		<br />
+		
+		<footer>
+		<p>&copy; 2021 Daryl del Rosario. All Rights Reserved.<br />
+		143 Abundant Road, Universal Connection, State of Soul, 17895<br />
+		777-369-1111</p>
+		</footer>
+		
+	<!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>	
+	</body>
+</html>

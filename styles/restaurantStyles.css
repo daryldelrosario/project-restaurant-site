@@ -1,0 +1,92 @@
+/*
+Creator: Daryl del Rosario
+Date Created: Friday, August 13, 2021 @ 12:37pm
+Date Last Modified: Saturday, August 14, 2021 @ 9:02am
+*/
+
+body {
+	background-color: #f7e0d4;
+}
+
+header {
+		background-color: #fb9902;
+		text-align: center;
+		padding: 20px;
+		font-family: 'Arvo', serif;
+}
+
+nav {
+	height: 60px;
+	padding: 10px;
+	border-top: thin black solid;
+	border-bottom: thin black solid;
+	background-color: white;
+}
+
+nav a {
+	padding: 20px;
+	margin: 0px 10px 0px 10px;
+}
+
+/*
+.carousel img {
+	margin: auto;
+}
+*/
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev{
+    display:block;
+}
+
+#carouselCaption {
+	font-family: 'Arvo', serif;
+}
+
+h2 {
+	color: red;
+}
+
+h5 {
+	font-family: 'Arvo', serif;
+	color: #fc600a;
+}
+
+#homeText {
+	width: 90%;
+}
+
+#tLabel {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+#contactLabel, #contactLegend {
+	font-weight: bold;
+	text-align: right;
+}
+
+footer {
+	background-color: #fb9902;
+	color: #fc600a;
+	text-align: center;
+	padding: 30px;
+	font-family: ariel, helvetica, sans-serif;
+}
+
+
+/*
+nav a:visited {
+	color: #fccb1a;
+}
+
+nav a:hover {
+	font-size: 1.1em;
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	
+}
+
+*/
