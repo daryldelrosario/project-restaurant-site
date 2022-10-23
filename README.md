@@ -1,5 +1,5 @@
 # Restaurant Site: HTML CSS and JS Technical Project
-Live Demo: https://insert.livedemo.com
+Live Demo: https://daryldelrosario.github.io/project-restaurant-site/
 
 ## Acknowledgements
 * The Software Guild: https://www.thesoftwareguild.com/
