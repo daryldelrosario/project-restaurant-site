@@ -1,4 +1,4 @@
-# Restaurant Site: HTML CSS and JS Technical Project
+# Mock Website for Fictional Restaurant
 Live Demo: https://daryldelrosario.github.io/restaurant-site/
 
 ## Acknowledgements
